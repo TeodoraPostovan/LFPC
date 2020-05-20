@@ -1,0 +1,50 @@
+-------BEGIN CONVERTING CFG TO CNF!-------
+
+STEP 1: 
+
+S0->S
+S->abAB
+A->BS|aA|b
+B->BA|ababB|e|b
+c->AS
+
+STEP 2: 
+
+S0->S
+S->abAB|bA
+A->BS|aA|b|S
+B->BA|ababB|b|A
+c->AS
+
+STEP 3: 
+
+S0->abAB|bA
+S->abAB|bA
+A->BabAB|bA|aA|b|abAB|bA
+B->BBabAB|bA|aA|b|abAB|bA|ababB|b|BabAB|bA|aA|b|abAB|bA
+c->AS
+
+STEP 4: 
+
+S0->C1AB|bA
+S->C1AB|bA
+A->BC1AB|bA|aA|b|C1AB|bA
+B->BBC1AB|bA|aA|b|C1AB|bA|C1C1B|b|BC1AB|bA|aA|b|C1AB|bA
+c->AS
+C1->ab
+
+STEP 5: 
+
+S0->C1AB|E2A
+S->C1AB|E2A
+A->BC1AB|E2A|E3A|E2|C1AB|E2A
+B->BBC1AB|E4A|E5A|E4|C1AB|E4A|C1C1B|E4|BC1AB|E4A|E5A|E4|C1AB|E4A
+c->AS
+C1->ab
+E2->b
+E3->a
+E4->b
+E5->a
+
+
+-------CFG SUCCESSFULLY CONVERTED TO CNF!-------

@@ -1,0 +1,4 @@
+S -> abAB
+A -> BS | aA | b
+B -> BA | ababB | e | b
+c -> AS
